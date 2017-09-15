@@ -1,0 +1,254 @@
+
+.donut {
+  position: absolute;
+  bottom: -130%;
+  left: 90.7%;
+  text-align: center;
+  margin-bottom: 80px;
+  opacity: 0;
+}
+
+.donut:hover{
+  animation: grow 0.3s forwards;
+  opacity: 1;
+}
+
+.donut-get{
+  position: absolute;
+  top: -250%;
+  right: -50%;
+  font-family: "Roboto-Condensed", sans-serif;
+  text-align: center;
+  font-size: 100%;
+  color: #FBE;
+  text-shadow: 1px 2px 2px black;
+}
+
+.donut-center{
+  width: 8vh;
+  height: 8vh;
+  background: rgba(0,0,0,0);
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px;
+  transform: translate(8px,8px);
+}
+
+.donut_base {
+  position: absolute;
+  height: 4vh;
+  width: 4vh;
+  border-radius: 100%;
+  border: solid 4vh #ffe6ad;
+  box-shadow: 0.5vh 0.5vh 0 rgba(0, 0, 0, .25);
+  animation: bounce-in 0.5s forwards;
+}
+.chocolate {
+  position: absolute;
+  top: 1vh;
+  left: 1vh;
+  height: 6vh;
+  width: 6vh;
+  border-radius: 100%;
+  border: solid 2vh #965e25;
+}
+.chocolate_curve {
+  position: absolute;
+  height: 4vh;
+  width: 2vh;
+  background-color: #965e25;
+  border-radius: 100%;
+  top: 4vh;
+  left: 0.4vh;
+  box-shadow: 9.2vh 0px 0 #965e25;
+}
+.chocolate_curve:before {
+  content: "";
+  z-index: 100;
+  position: absolute;
+  height: 4vh;
+  width: 2vh;
+  background-color: #965e25;
+  border-radius: 100%;
+  top: -4.6vh;
+  left: 4.8vh;
+  box-shadow: 9.2vh 0px 0 #965e25;
+  transform: rotate(90deg);
+}
+.rotate-45 {
+  transform: rotate(45deg);
+  top: 0.76923vh;
+  left: 1.73913vh;
+}
+.sprinkle {
+  position: absolute;
+  border-radius: 2vh;
+  z-index: 100;
+  animation: bounce-in-sprinkles 0.5s forwards;
+}
+.one {
+  transform: rotate(45deg);
+  background-color: #ffa3c0;
+  top: 2vh;
+  left: 2.5vh;
+  animation-delay: 1s;
+}
+.two {
+  transform: rotate(10deg);
+  background-color: #ffa3c0;
+  top: 6vh;
+  left: 1.9vh;
+  animation-delay: 1.5s;
+}
+.three {
+  transform: rotate(60deg);
+  background-color: #ffa3c0;
+  top: 4vh;
+  left: 1.5vh;
+  animation-delay: 1.25s;
+}
+.four {
+  transform: rotate(60deg);
+  background-color: #ffa3c0;
+  top: 8.5vh;
+  left: 2.5vh;
+  animation-delay: 1s;
+}
+.five {
+  transform: rotate(-20deg);
+  background-color: #ffa3c0;
+  top: 9.5vh;
+  left: 4.5vh;
+  animation-delay: 1.5s;
+}
+.six {
+  transform: rotate(65deg);
+  background-color: #ffa3c0;
+  top: 9.5vh;
+  left: 6.5vh;
+  animation-delay: 1.5s;
+}
+.seven {
+  transform: rotate(-45deg);
+  background-color: #ffa3c0;
+  top: 8.5vh;
+  left: 8.7vh;
+  animation-delay: 1.25s;
+}
+.eight {
+  transform: rotate(20deg);
+  background-color: #ffa3c0;
+  top: 6.5vh;
+  left: 10vh;
+  animation-delay: 1s;
+}
+.nine {
+  transform: rotate(-120deg);
+  background-color: #ffa3c0;
+  top: 4.5vh;
+  left: 9.8vh;
+  animation-delay: 1.5s;
+}
+.ten {
+  transform: rotate(-10deg);
+  background-color: #ffa3c0;
+  top: 2.5vh;
+  left: 9vh;
+  animation-delay: 1s;
+}
+.eleven {
+  transform: rotate(50deg);
+  background-color: #ffa3c0;
+  top: 1.5vh;
+  left: 7vh;
+  animation-delay: 1.25s;
+}
+.twelve {
+  transform: rotate(-20deg);
+  background-color: #ffa3c0;
+  top: 1vh;
+  left: 5vh;
+  animation-delay: 1s;
+}
+.chocolate_curves_container {
+  position: absolute;
+  opacity: 0;
+  animation: bounce-in-choco 0.5s 0.5s forwards;
+}
+
+@keyframes grow {
+  0%{
+    transform: translate(0,0);
+    transform: scale(1.0);
+  }
+  100%{
+    transform: translate(50%,50%);
+    transform: scale(1.1);
+  }
+}
+
+@keyframes spin {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.001);
+  }
+  20% {
+    opacity: 1 !important;
+  }
+  80% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes bounce-in-sprinkles {
+  0% {
+    opacity: 0;
+    height: 0;
+    width: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    height: 1.53333vh;
+    width: 0.575vh;
+  }
+  100% {
+    height: 1.33333vh;
+    width: 0.5vh;
+  }
+}
+@keyframes bounce-in-choco {
+  0% {
+    transform: scale(0.001);
+    left: 6vh;
+    top: 6vh;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    transform: scale(1.15);
+    left: - 0.9vh;
+    top: - 0.9vh;
+  }
+  100% {
+    left: 0;
+    transform: scale(1);
+    top: 0;
+    opacity: 1;
+  }
+}
+
